@@ -8,4 +8,11 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+
+    public function dashboard() :string
+    {
+        $config = config('MyConfig');
+        $data = [];
+        return view('templates/template',$data);
+    }
 }
